@@ -1,0 +1,45 @@
+#addition 
+def ajouter(x,y):
+    return x + y
+#soustraction
+def soustraire(x,y):
+    return x - y
+#multiplication
+def multiplier(x,y):
+    return x * y
+#division 
+def diviser(x,y):
+    return x / y    
+
+
+print("""choix options \n
+         1- Additioon \n
+         2- Soustraction \n
+         3- Multiplication \n
+         4- Division \n""") 
+
+while True : 
+    choix = input('entrez votre choix(1,2,3,4):')  
+
+    if choix in ('1','2','3','4'):
+        num1 = float(input("Entrez le premier nombre :"))
+        num2 = float(input("Entrez le second nombre :"))
+
+        if choix == '1' :
+            print(num1 ,'+',num2, '=',ajouter(num1,num2)) 
+        
+        if choix == '2' :
+            print(num1 ,'-',num2, '=',soustraire(num1,num2)) 
+
+        if choix == '3' :
+            print(num1 ,'*',num2, '=',multiplier(num1,num2)) 
+
+        if choix == '4' :
+            print(num1 ,'/',num2, '=',diviser(num1,num2)) 
+            
+
+        prochain_calcul=input("voulez vous faire un autre calcul ? (Oui/Non):")
+        if prochain_calcul == "Non": 
+            break       
+
+
